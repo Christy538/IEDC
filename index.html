@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="mb">
-      <h1>My Website is here</h1>
+      <h1 onclick="disappear()">My Website is here</h1>
       <h2>Come see this</h2>
     </div>
     <div class="flexes">
@@ -36,26 +36,25 @@
     </div>
     <input type="text" placeholder="username" />
     <input type="password" placeholder="password" />
-    <button class="bn">Submit here</button>
-    
-    <div class="tb">
-    <table>
-      <tr>
-        <th>girls</th>
-        <th>boys</th>
-      </tr>
-      <tr>
-        <td>nandana</td>
-        <td>sreeraj</td>
-      </tr>
-      <tr>
-        <td>nandana</td>
-        <td>sreeraj</td>
-      </tr>
-    </table>
+    <button class="bn" onclick="clicks()">Submit here</button>
 
-  </div>
-    <div class="choco">
+    <div class="tb">
+      <table>
+        <tr>
+          <th>girls</th>
+          <th>boys</th>
+        </tr>
+        <tr>
+          <td>nandana</td>
+          <td>sreeraj</td>
+        </tr>
+        <tr>
+          <td>nandana</td>
+          <td>sreeraj</td>
+        </tr>
+      </table>
+    </div>
+    <div class="choco" id="chocolate">
       <p>Chocolates are very tasty</p>
     </div>
 
@@ -65,5 +64,26 @@
       >click here to see my github</a
     >
     <textarea class="tx"></textarea>
+
+    <script>
+      function clicks() {
+        var x = document.getElementById("chocolate");
+        if (x.style.display == "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+
+      function disappear() {
+        var y = document.getElementById("chocolate");
+        if (y.style.display == "block") {
+          y.style.display = "none";
+        } else {
+          y.style.display = "block";
+        }
+      }
+    </script>
+    
   </body>
 </html>
